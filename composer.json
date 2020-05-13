@@ -1,0 +1,16 @@
+{
+    "name": "ant-service/team",
+    "description": "ant service",
+    "type": "project",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MaHaiBo",
+            "email": "mahaibo@hongbang.js.cn"
+        }
+    ],
+    "minimum-stability": "dev"
+}
