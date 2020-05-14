@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "26db6ff381c5c26f7b8925f24a729500",
-    "packages": [],
+    "content-hash": "061de4b54b049d1d054c15dd40795397",
+    "packages": [
+        {
+            "name": "ant-service/library",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ant-service/library.git",
+                "reference": "d97be3f69fa84db831861ef04ce1c3150f9fa77d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ant-service/library/zipball/d97be3f69fa84db831861ef04ce1c3150f9fa77d",
+                "reference": "d97be3f69fa84db831861ef04ce1c3150f9fa77d",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AntService\\": "core",
+                    "AntService\\Src\\Common\\": "source/common/",
+                    "AntService\\Src\\DataBase\\": "source/database/",
+                    "AntService\\Src\\Interfaces\\": "source/interfaces/",
+                    "AntService\\Src\\Output\\": "source/output/"
+                },
+                "files": [
+                    "core/Initialize.php",
+                    "core/QuickFun.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MaHaiBo",
+                    "email": "mahaibo@hongbang.js.cn"
+                }
+            ],
+            "description": "ant service",
+            "time": "2020-05-14T08:31:24+00:00"
+        }
+    ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",

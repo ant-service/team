@@ -3,7 +3,8 @@
     "description": "ant service",
     "type": "project",
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=7.1.0",
+        "ant-service/library":"v0.1.1"
     },
     "license": "MIT",
     "authors": [
@@ -12,5 +13,10 @@
             "email": "mahaibo@hongbang.js.cn"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "AntService\\Command\\": "command"
+        }
+    }
 }

@@ -6,4 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AntService\\Src\\Output\\' => array($vendorDir . '/ant-service/library/source/output'),
+    'AntService\\Src\\Interfaces\\' => array($vendorDir . '/ant-service/library/source/interfaces'),
+    'AntService\\Src\\DataBase\\' => array($vendorDir . '/ant-service/library/source/database'),
+    'AntService\\Src\\Common\\' => array($vendorDir . '/ant-service/library/source/common'),
+    'AntService\\Command\\' => array($baseDir . '/command'),
+    'AntService\\' => array($vendorDir . '/ant-service/library/core'),
 );
