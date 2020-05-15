@@ -1,3 +1,16 @@
 <?php
 
+use AntService\NetworkRequest;
+
+echo "账号：";
+$mobile = str_replace(PHP_EOL, '', fgets(STDIN));
+
+echo "密码：";
+$password = str_replace(PHP_EOL, '', fgets(STDIN));
+
+$result = NetworkRequest::postRequest('http://ant.dev.hongbang.js.cn/module_90baa532_58dc_57f1_ec82_18ee0690e7c8', ['mobile' => $mobile, 'password' => $password]);
+
+var_dump($result);
+
 exit('梦礼是个铁憨憨');
+
