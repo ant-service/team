@@ -1,17 +1,17 @@
 [
     {
         "name": "ant-service/library",
-        "version": "v0.1.2",
-        "version_normalized": "0.1.2.0",
+        "version": "v0.1.11",
+        "version_normalized": "0.1.11.0",
         "source": {
             "type": "git",
             "url": "https://github.com/ant-service/library.git",
-            "reference": "c6bdf70879527f3e54d3b03024cc061df788e288"
+            "reference": "b39f2f0a82508f67a9bdb5319718ecdd345d0476"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ant-service/library/zipball/c6bdf70879527f3e54d3b03024cc061df788e288",
-            "reference": "c6bdf70879527f3e54d3b03024cc061df788e288",
+            "url": "https://api.github.com/repos/ant-service/library/zipball/b39f2f0a82508f67a9bdb5319718ecdd345d0476",
+            "reference": "b39f2f0a82508f67a9bdb5319718ecdd345d0476",
             "shasum": "",
             "mirrors": [
                 {
@@ -23,7 +23,7 @@
         "require": {
             "php": ">=7.1.0"
         },
-        "time": "2020-05-15T02:08:06+00:00",
+        "time": "2020-05-19T09:48:17+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -32,7 +32,8 @@
                 "AntService\\Src\\Common\\": "source/common/",
                 "AntService\\Src\\DataBase\\": "source/database/",
                 "AntService\\Src\\Interfaces\\": "source/interfaces/",
-                "AntService\\Src\\Output\\": "source/output/"
+                "AntService\\Src\\Output\\": "source/output/",
+                "AntService\\Src\\Cache\\": "source/cache/"
             },
             "files": [
                 "core/Initialize.php",

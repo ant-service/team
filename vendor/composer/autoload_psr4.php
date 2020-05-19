@@ -10,6 +10,7 @@ return array(
     'AntService\\Src\\Interfaces\\' => array($vendorDir . '/ant-service/library/source/interfaces'),
     'AntService\\Src\\DataBase\\' => array($vendorDir . '/ant-service/library/source/database'),
     'AntService\\Src\\Common\\' => array($vendorDir . '/ant-service/library/source/common'),
+    'AntService\\Src\\Cache\\' => array($vendorDir . '/ant-service/library/source/cache'),
     'AntService\\Command\\' => array($baseDir . '/command'),
     'AntService\\' => array($vendorDir . '/ant-service/library/core'),
 );

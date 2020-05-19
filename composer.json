@@ -4,7 +4,7 @@
     "type": "project",
     "require": {
         "php": ">=7.1.0",
-        "ant-service/library":"v0.1.2"
+        "ant-service/library":"v0.1.11"
     },
     "license": "MIT",
     "authors": [
