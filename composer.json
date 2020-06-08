@@ -1,0 +1,22 @@
+{
+    "name": "ant-service/team",
+    "description": "ant service",
+    "type": "project",
+    "require": {
+        "php": ">=7.1.0",
+        "ant-service/library-tp6": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MaHaiBo",
+            "email": "mahaibo@hongbang.js.cn"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "AntService\\Command\\": "command"
+        }
+    }
+}
