@@ -1,5 +1,0 @@
-<?php
-
-writeConfig('userinfo.token','');
-
-exit('登陆状态已注销！');
