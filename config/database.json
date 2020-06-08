@@ -1,9 +1,0 @@
-{
-    "HostAddress": "rm-bp141e7488j3cb9ng125010.mysql.rds.aliyuncs.com",
-    "DbName": "ant_service",
-    "UserName": "ant_service",
-    "Password": "Tab309668",
-    "HostPort": 3306,
-    "Charset": "utf8mb4",
-    "Engine": "InnoDB"
-}

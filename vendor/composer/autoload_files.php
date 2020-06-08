@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '6df254737b22ea0203f28b20a7462f0d' => $vendorDir . '/ant-service/library/core/Initialize.php',
-    'a25f7570f5b960c3d90882bf965ab97e' => $vendorDir . '/ant-service/library/core/QuickFun.php',
+    '9b552a3cc426e3287cc811caefa3cf53' => $vendorDir . '/topthink/think-helper/src/helper.php',
+    '538ca81a9a966a6716601ecf48f4eaef' => $vendorDir . '/opis/closure/functions.php',
+    '8dad71d6b915254b6f341f402cca22e1' => $vendorDir . '/ant-service/library-tp6/source/helper.php',
 );

@@ -6,11 +6,20 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'AntService\\Src\\Output\\' => array($vendorDir . '/ant-service/library/source/output'),
-    'AntService\\Src\\Interfaces\\' => array($vendorDir . '/ant-service/library/source/interfaces'),
-    'AntService\\Src\\DataBase\\' => array($vendorDir . '/ant-service/library/source/database'),
-    'AntService\\Src\\Common\\' => array($vendorDir . '/ant-service/library/source/common'),
-    'AntService\\Src\\Cache\\' => array($vendorDir . '/ant-service/library/source/cache'),
+    'think\\' => array($vendorDir . '/topthink/framework/src/think', $vendorDir . '/topthink/think-helper/src', $vendorDir . '/topthink/think-orm/src'),
+    'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
+    'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
+    'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
+    'Psr\\Cache\\' => array($vendorDir . '/psr/cache/src'),
+    'Opis\\Closure\\' => array($vendorDir . '/opis/closure/src'),
+    'League\\Flysystem\\Cached\\' => array($vendorDir . '/league/flysystem-cached-adapter/src'),
+    'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),
+    'AntService\\Src\\Validate\\' => array($vendorDir . '/ant-service/library-tp6/source/validate'),
+    'AntService\\Src\\Think\\' => array($vendorDir . '/ant-service/library-tp6/source/think'),
+    'AntService\\Src\\Output\\' => array($vendorDir . '/ant-service/library-tp6/source/output'),
+    'AntService\\Src\\Network\\' => array($vendorDir . '/ant-service/library-tp6/source/network'),
+    'AntService\\Src\\File\\' => array($vendorDir . '/ant-service/library-tp6/source/file'),
+    'AntService\\Src\\DataBase\\' => array($vendorDir . '/ant-service/library-tp6/source/database'),
+    'AntService\\Src\\' => array($vendorDir . '/ant-service/library-tp6/source'),
     'AntService\\Command\\' => array($baseDir . '/command'),
-    'AntService\\' => array($vendorDir . '/ant-service/library/core'),
 );

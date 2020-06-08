@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * 用户注册
+ * keywords: Token,令牌
+ * @category business 
+ * @author mahaibo <mahaibo@hongbang.js.cn>
+ */
+class MODULE_12337743_31EB_285C_628C_09871BFB6751
+{
+    public static function init()
+    {
+        syncDataBase(['user' => 'id', 'user_account' => 'id,uid,username,password,bind_mobile']);
+    }
+    /**
+     * Undocumented function
+     *
+     * @return void
+     * @author mahaibo <mahaibo@hongbang.js.cn>
+     */
+    public static function main()
+    {
+        $args = getArguments(self::class);
+        $codeType = $args['code_type'] ?? '';
+        if ($codeType == '') {
+            errorOutput('REGISTER_ACCOUNT_FAIL', '短信类型不能为空');
+        }
+        $mobile = $args['mobile'] ?? '';
+        if ($mobile == '') {
+            errorOutput('REGISTER_ACCOUNT_FAIL', '手机号不能为空');
+        }
+        $code = $args['code'] ?? '';
+        if ($code != getCache('sms_' . $codeType . '_' . $mobile)) {
+            errorOutput('REGISTER_ACCOUNT_FAIL', '验证码错误,登陆失败');
+        }
+        $username = $args['username'];
+        if ($username == '') {
+            errorOutput('REGISTER_ACCOUNT_FAIL', '用户名不能为空');
+        }
+        $password = $args['password'];
+        if ($password == '') {
+            errorOutput('REGISTER_ACCOUNT_FAIL', '密码不能为空');
+        }
+        $result = useModule('MODULE_F93F05BE_4D2E_91C5_821F_A9F3E308852F')
+            ::table('user_account')->field('uid,username')->where(['bind_mobile' => $mobile])->find();
+        if ($result == null) {
+            return errorOutput('REGISTER_ACCOUNT_ERROR', '账号不存在，登陆失败！', 500);
+        }
+        $userId = getUUID();
+        $userResult = useModule('MODULE_F93F05BE_4D2E_91C5_821F_A9F3E308852F')::table('user')->insert([
+            'id' => $userId
+        ]);
+        if ($userResult) {
+            $userAccountResult = useModule('MODULE_F93F05BE_4D2E_91C5_821F_A9F3E308852F')::table('user_account')->insert([
+                'id' => getUUID(),
+                'uid' => $userId,
+                'username' => $username,
+                'password' => $password,
+                'bind_mobile' => $mobile
+            ]);
+        }
+        return ['result' => boolval($userAccountResult ?? false)];
+    }
+}
