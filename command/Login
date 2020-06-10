@@ -1,12 +1,16 @@
 <?php
 
-use AntService\NetworkRequest;
+use AntService\Src\NetworkRequest;
 
 //检测登陆状态
 
-$url = readEnv('SERVICE_URL') . 'MODULE_42A88B79_8F5C_58F4_87AE_F37A040548E9';
-
-$userResult = NetworkRequest::postRequest($url, ['token' => readConfig('userinfo.token')]);
+$userResult = NetworkRequest::use(function ($obj) {
+    $obj->formatResult();
+    $obj->post(
+        readEnv('SERVICE_URL') . 'MODULE_42A88B79_8F5C_58F4_87AE_F37A040548E9',
+        array('token' => readConfig('userinfo.token'))
+    );
+});
 
 if ($userResult['status'] == 200) exit('用户已登录,账号:' . convertArray($userResult['content'])['username']);
 
@@ -20,7 +24,14 @@ $username = str_replace(PHP_EOL, '', fgets(STDIN));
 echo "密码：";
 $password = str_replace(PHP_EOL, '', fgets(STDIN));
 
-$result = NetworkRequest::postRequest($url, ['username' => $username, 'password' => $password]);
+$result = NetworkRequest::use(function ($obj) use ($url, $username, $password) {
+    $obj->formatResult();
+    $obj->post(
+        $url,
+        array('username' => $username, 'password' => $password)
+    );
+});
+
 
 $content = convertArray($result['content']);
 

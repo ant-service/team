@@ -4,7 +4,7 @@
     "type": "project",
     "require": {
         "php": ">=7.1.0",
-        "ant-service/library-tp6": "dev-master"
+        "ant-service/library-tp6": "^v0.0.9"
     },
     "license": "MIT",
     "authors": [

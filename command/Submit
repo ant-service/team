@@ -1,6 +1,6 @@
 <?php
 
-use AntService\NetworkRequest;
+use AntService\Src\NetworkRequest;
 
 echo "请输入模块名：";
 
@@ -10,11 +10,17 @@ $filePath = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'module' . DIRECTORY_SEPARA
 
 if (!is_file($filePath)) exit('模块不存在');
 
-$content = file_get_contents($filePath);
+$content = base64_encode(file_get_contents($filePath));
 
 $url = readEnv('SERVICE_URL') . 'MODULE_F4208B16_46C0_E0C9_A41A_5DE4DD484EBB';
 
-$userResult = NetworkRequest::postRequest($url, ['content' => $content, 'token' => readConfig('userinfo.token'), 'name' => $fileName]);
+$userResult = NetworkRequest::use(function ($obj) use ($url, $content, $fileName) {
+    $obj->formatResult();
+    $obj->post(
+        $url,
+        array('content' => $content, 'token' => readConfig('userinfo.token'), 'name' => $fileName)
+    );
+});
 
 if ($userResult['status'] != 200) exit(convertArray($userResult['content'])['msg']);
 

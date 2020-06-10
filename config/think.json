@@ -1,0 +1,45 @@
+{
+    "default": {
+        "database": "mysql",
+        "cache": "file",
+        "lang": "zh-cn"
+    },
+    "database": {
+        "mysql": {
+            "type": "mysql",
+            "hostname": "127.0.0.1",
+            "database": "ant_service1",
+            "username": "root",
+            "password": "root",
+            "hostport": "3306",
+            "params": [],
+            "charset": "utf8",
+            "prefix": ""
+        }
+    },
+    "cache": {
+        "file": {
+            "type": "File",
+            "path": "",
+            "prefix": "",
+            "expire": 0,
+            "tag_prefix": "tag:",
+            "serialize": []
+        },
+        "redis": {
+            "type": "redis",
+            "host": "127.0.0.1"
+        }
+    },
+    "lang": {
+        "allow_lang_list": [],
+        "detect_var": "lang",
+        "use_cookie": true,
+        "cookie_var": "think_lang",
+        "extend_list": [],
+        "accept_language": {
+            "zh-hans-cn": "zh-cn"
+        },
+        "allow_group": false
+    }
+}
